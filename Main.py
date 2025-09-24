@@ -5,6 +5,9 @@ background_size = pygame.display.set_mode((1366, 760))
 pygame.display.set_caption("Stick Clash")
 
 bg = pygame.image.load('Game/bg.jpg')
+idle = pygame.image.load('Game/standing.png')
+walkright = [pygame.image.load(f'Game/R{i}E.png') for i in range(1, 10)]
+walkleft = [pygame.image.load(f'Game/L{i}E.png') for i in range(1, 10)]
 
 clock = pygame.time.Clock()
 
