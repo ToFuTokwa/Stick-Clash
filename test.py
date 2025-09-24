@@ -1,10 +1,10 @@
 import pygame
 pygame.init()
 
-background_size = pygame.display.set_mode((1344,768))
+background_size = pygame.display.set_mode((1920,1097))
 pygame.display.set_caption("Stick Clash")
 
-bg = pygame.image.load('Game/bg1.png')
+bg = pygame.image.load('Game/bg1.jpg')
 idle = pygame.image.load('Game/standing.png')
 walkright = [pygame.image.load(f'Game/R{i}E.png') for i in range(1, 10)]
 walkleft = [pygame.image.load(f'Game/L{i}E.png') for i in range(1, 10)]
@@ -13,7 +13,7 @@ clock = pygame.time.Clock()
 
 # FOR MOVING
 x = 200
-y = 580
+y = 850
 width = 64
 height = 64
 speed = 16
@@ -33,7 +33,7 @@ is_jump = False
 y_velocity = 0
 jump_force = -32      # Higher negative = faster jump up
 gravity = 3          # Higher = faster fall
-ground_y = 580
+ground_y = 850
 
 def redraw_game_window():
     global walkcount
@@ -106,8 +106,8 @@ while run:
             is_jump = False
 
     # Keep within screen bounds
-    x = max(0, min(x, 1344 - width))
-    y = max(0, min(y, 768 - height))
+    x = max(0, min(x, 1920 - width))
+    y = max(0, min(y, 10997 - height))
 
 # 🔧 FIXED: Removed unnecessary redraw after quitting
 pygame.quit()
